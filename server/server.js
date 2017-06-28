@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/Todo');
 var {User} = require('./models/User');
+var {authenticate} = require('./middleware/authenticate');
 
 var app = express();
 
@@ -100,6 +101,12 @@ app.post('/users', (req, res) => {
         res.status(400).send(e);
     })
 });
+
+
+
+app.get('/users/me', authenticate, (req, res) => {
+    res.send(req.user);
+})
 
 app.listen(3000, () => {
     console.log('Started on port 3000')
