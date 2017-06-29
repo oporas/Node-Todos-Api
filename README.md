@@ -10,7 +10,8 @@ Practice repo for the-complete-nodejs-developer-course-2
 Create new json file server/config/config.json
 Example:
 
-`{
+```json
+{
     "test": {
         "PORT": 3000,
         "MONGODB_URI": "mongodb://localhost:27017/TodoAppTest",
@@ -21,7 +22,8 @@ Example:
         "MONGODB_URI": "mongodb://localhost:27017/TodoApp",
         "JWT_SECRET": "WOW-SUCH-SECRET"
     }
-}`
+}
+```
 
 ## Usage
 
